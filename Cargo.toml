@@ -7,7 +7,7 @@ edition = "2024"
 readme = "README.md"
 repository = "https://github.com/Mclilzee/text-replacer"
 homepage = "https://github.com/Mclilzee/text-replacer"
-keywords = ["replace", "replace all", "pattern", "dictionary"]
+keywords = ["replace", "replace-all", "pattern", "dictionary"]
 description = """
 Takes a String, or Bytes and replaces each word found with a same word from the provided dictionary
 """
