@@ -47,13 +47,6 @@ pub fn replace_le_16(dictionary: &HashMap<String, String>, bytes: &[u8]) -> (u12
                 let u16_bytes = u16::from_le_bytes([bytes[cursor], bytes[cursor + 1]]);
                 let char = char::from_u32(u16_bytes as u32).unwrap_or(';');
                 if char.is_ascii_alphanumeric() || char == '_' {
-                    if char.is_uppercase()
-                        && !chars.is_empty()
-                        && chars[chars.len() - 1].is_lowercase()
-                    {
-                        break;
-                    }
-
                     cursor += 2;
                     chars.push(char);
                 } else {
@@ -98,13 +91,6 @@ pub fn replace_be_16(dictionary: &HashMap<String, String>, bytes: &[u8]) -> (u12
                 let u16_bytes = u16::from_be_bytes([bytes[cursor], bytes[cursor + 1]]);
                 let char = char::from_u32(u16_bytes as u32).unwrap_or(';');
                 if char.is_ascii_alphanumeric() || char == '_' {
-                    if char.is_uppercase()
-                        && !chars.is_empty()
-                        && chars[chars.len() - 1].is_lowercase()
-                    {
-                        break;
-                    }
-
                     cursor += 2;
                     chars.push(char);
                 } else {
